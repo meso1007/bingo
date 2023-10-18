@@ -1,0 +1,48 @@
+import random
+import tkinter as tk
+from tkinter import messagebox, ttk
+
+def my_func():
+        n = random.randint(1,75)    
+        if n in list:
+            None            
+        else:    
+            list.append(n)    
+        print(list) 
+            
+
+
+app = tk.Tk()
+
+# キャンバス
+canvas = tk.Canvas(
+    app,
+    width=300,
+    height=200,
+    highlightthickness=0
+)
+canvas.grid(row=0, column=0, padx=10, pady=10)
+
+rect = canvas.create_rectangle(
+    10, 10, 290, 190,
+    fill="white",
+    width=1,
+)
+
+# リストボックス
+listbox = tk.Listbox(
+    app
+)
+listbox.grid(row=0, column=1, padx=10, pady=10)
+
+list =[]  
+
+# ボタン
+button = tk.Button(
+    app,
+    text="bingostart",
+    command=my_func
+)
+button.grid(row=1, column=1, padx=10, pady=10)
+
+app.mainloop()
